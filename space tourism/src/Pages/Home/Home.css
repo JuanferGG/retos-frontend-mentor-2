@@ -1,0 +1,88 @@
+
+.HomeSection{
+    width: 100%;
+    min-height: 100%;
+    max-width: fit-content;
+    background-image: url('../../assets/home/background-home-desktop.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.HomeSection .left, .HomeSection .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding-bottom: 5em;
+    color: white;
+    gap: 1em;
+}
+.HomeSection .right{
+    align-items: center;
+}
+.HomeSection .left h1{
+    margin: 0;
+    font-size: clamp(5em, 10vw, 10em);
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 10px;
+}
+.HomeSection .left h2, .HomeSection .left p{
+    width: 80%;
+    font-weight: 100;
+    text-align: left;
+    margin: 0;
+}
+.HomeSection .left h2{
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 5px;
+}
+.HomeSection .left p{
+    line-height: 2;
+    font-size: 1.2em;
+}
+
+.HomeSection .right{
+    height: 50%;
+}
+.HomeSection .right a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 5px;
+
+    transition: all .6s;
+}
+.HomeSection .right a:hover{
+    width: 250px;
+    height: 250px;
+    font-size: 2.3em;
+}
+
+@media (max-width: 850px){
+    .HomeSection{
+        background-image: url('../../assets/home/background-home-tablet.jpg');
+        flex-direction: column;
+        align-items: center;
+    }
+    .HomeSection .left, .HomeSection .right{
+        width: 80%;
+    }
+    .HomeSection .left{
+        margin-top: 15vh;
+        padding-bottom: 3em;
+    }
+}

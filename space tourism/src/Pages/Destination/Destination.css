@@ -1,0 +1,169 @@
+.DestinationSection {
+    width: 100%;
+    min-height: 100%;
+    max-height: fit-content;
+    background-image: url('../../assets/destination/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DestinationSection .ContPlanetInfo, .DestinationSection .ContPlanet{
+    width: 39%;
+    height: 60%;
+}
+.DestinationSection .ContPlanetInfo{
+    margin-top: 7em;
+}
+
+.DestinationSection .planetInfo{
+    background-color: transparent;
+    color: white;
+    min-height: 450px;
+    max-height: fit-content;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5em;
+}
+.DestinationSection .planetInfo h1{
+    margin: 0;
+    font-size: 5em;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+.DestinationSection .planetInfo p{
+    line-height: 2;
+    text-wrap: balanced;
+    font-weight: 200;
+    font-size: 1.2em;
+}
+.DestinationSection .titlePlanet{
+    color: white;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+.DestinationSection .imgPlanet{
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    transition: all .6s;
+
+    margin: auto;
+}
+
+@media (max-width: 850px){
+    .DestinationSection .imgPlanet{
+        width: 270px;
+        height: 270px;
+    }
+    .DestinationSection{
+        flex-direction: column;
+    }
+    .DestinationSection .ContPlanetInfo, .DestinationSection .ContPlanet{
+        width: 100%;
+        align-items: center !important;
+    }
+}
+
+.DestinationSection nav {
+    background: transparent;
+    padding: 5px 5px 0;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 44px;
+}
+
+.DestinationSection .tabs {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.DestinationSection  ul,
+.DestinationSection li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.DestinationSection  ul {
+    display: flex;
+    width: 100%;
+}
+
+.DestinationSection li {
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+    cursor: pointer;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    user-select: none;
+}
+
+.DestinationSection li.selected {
+    border-bottom: 2px solid white;
+}
+
+.DestinationSection li button {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background: #fff;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    stroke: #000;
+    margin-left: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.DestinationSection .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: #fff;
+}
+
+.DestinationSection .add-item {
+    width: 30px;
+    height: 30px;
+    background: #eee;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    align-self: center;
+}
+
+.DestinationSection .add-item:disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+}

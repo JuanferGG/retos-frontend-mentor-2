@@ -1,0 +1,107 @@
+body {
+    --black: #000000;
+    --ash-black: #222;
+    --white: #fafafa;
+    --sky: #00ccff;
+    --green: #22dddd;
+    --blue: #1300ff;
+    --dusk: #6600ff;
+    --purple: #9900ff;
+    --pink: #ff0066;
+    --red: #fe0222;
+    --orange: #fd7702;
+    --yellow: #ffbb00;
+  
+    --background: var(--dusk);
+    --accent: var(--white);
+  
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .menu {
+    width: 30px;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    display: none;
+    z-index: 100;
+  }
+  
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(51, 78, 78, 0.258);
+    backdrop-filter: blur(3px);
+    width: 200px;
+    transform: translateX(-95%) translateY(.5em);
+  }
+  
+  .menu li {
+    color: var(--background);
+    display: block;
+  }
+  
+  .menu ul,
+  .menu li a {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 10px;
+    color: white;
+    font-size: 1.2em;
+  }
+  
+  button {
+    background: none;
+    outline: none;
+    border: none;
+  }
+  
+  button path {
+    fill: var(--background);
+  }
+  
+  input {
+    accent-color: var(--accent);
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 50px;
+    align-items: center;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  input[type="number"] {
+    border: 0;
+    border-bottom: 1px dotted var(--accent);
+    color: var(--accent);
+    margin-left: 10px;
+    background: var(--background);
+    width: 50px;
+  }
+  
+  input[type="number"]:focus {
+    outline: none;
+    border-bottom: 2px solid var(--accent);
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  
+@media (max-width: 850px){
+    .menu{
+        display: block;
+    }
+}
