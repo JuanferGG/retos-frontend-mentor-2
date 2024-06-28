@@ -4,20 +4,30 @@ import { Layout } from "../../Components/Layout/Layout";
 
 import "./Destination.css";
 
-import { destinations } from "./Destination";
+import { destinations } from "./DestinationObject";
 
-export const Destination = () => {
+export const DestinationPage = () => {
   const [selectTab, setselectTab] = useState(destinations[0]);
 
   return (
     <>
       <Layout>
         <section className="DestinationSection">
-          <div className="ContPlanet">
+          <motion.div 
+            className="ContPlanet"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: .7 }}
+            >
             <h2 className="titlePlanet">01 PICK YOUR DESTINATION</h2>
             <div className="imgPlanet" style={{ backgroundImage: `url(${selectTab.images.webp})` }}></div>
-          </div>
-          <div className="ContPlanetInfo">
+          </motion.div>
+          <motion.div 
+            className="ContPlanetInfo"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: .9 }}
+            >
             <nav>
               <ul>
                 {destinations.map((destin, key) => {
@@ -57,7 +67,7 @@ export const Destination = () => {
                 </div>
               </motion.div>
             </AnimatePresence>
-          </div>
+          </motion.div>
         </section>
       </Layout>
     </>

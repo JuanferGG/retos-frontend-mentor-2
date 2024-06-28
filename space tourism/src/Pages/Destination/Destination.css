@@ -69,6 +69,13 @@
         width: 100%;
         align-items: center !important;
     }
+    .DestinationSection .ContPlanetInfo{
+        margin-top: 2em;
+    }
+    .DestinationSection .titlePlanet{
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .DestinationSection nav {
